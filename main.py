@@ -6,6 +6,7 @@ import form2
 from itertools import groupby
 import mainwindow
 import sys
+import re
 
 
 class Form(PyQt5.QtWidgets.QWidget):
