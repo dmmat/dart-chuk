@@ -35,17 +35,17 @@ class MainWindow(PyQt5.QtWidgets.QMainWindow):
 columns, rows = 3, 5
 app = PyQt5.QtWidgets.QApplication(sys.argv)
 main_window = MainWindow()
-form = Form()
 
 
 def show_second_form():
-    if len(main_window.text1) == 0 or len(main_window.text2) == 0 or len(main_window.ui.textEdit.toPlainText()) == 0:
+    if len(main_window.text1) == 0 or len(main_window.text2) == 0 or len(main_window.ui.text_edit.toPlainText()) == 0:
         return False
+    form = Form()
     form.show()
     main_window.hide()
     text1 = main_window.text1
     text2 = main_window.text2
-    word_search = main_window.ui.textEdit.toPlainText()
+    word_search = main_window.ui.text_edit.toPlainText()
 
     def cook_text(input_text, search):
         text = re.compile('\w+').findall(input_text)
@@ -80,11 +80,8 @@ def show_second_form():
         stab = 1 - (var/(math.sqrt(sumc2-1)))
         return matrix, ser, vid, mira, var, stab
 
-    cooked_text1 = cook_text(text1, word_search)
-    cooked_text2 = cook_text(text2, word_search)
-
-    matrix1, ser1, vid1, mira1, var1, stab1 = cook_matrix(cooked_text1)
-    matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cooked_text2)
+    matrix1, ser1, vid1, mira1, var1, stab1 = cook_matrix(cook_text(text1, word_search))
+    matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cook_text(text2, word_search))
     form.ui.tableView.setModel(Model(form, matrix=matrix1))
     form.ui.tableView_2.setModel(Model(form, matrix=matrix2))
     form.ui.label_7.setText(str(ser1))
@@ -101,8 +98,13 @@ def show_second_form():
     def compare():
         smuga1 = ser1 + (mira1 * 2)
         smuga2 = ser2 - (mira2 * 2)
-        form.ui.label_26.setText(str(smuga1))
-        form.ui.label_27.setText(str(smuga2))
+        smuga3 = ser2 + (mira2 * 2)
+        smuga4 = ser2 - (mira2 * 2)
+        st1 = 'від {0} до{1}'.format(smuga2, smuga1)
+        st2 = 'від {0} до{1}'.format(smuga4, smuga3)
+        form.ui.label_26.setText(str(st1))
+        form.ui.label_27.setText(str(st2))
+
 
     form.ui.pushButton.clicked.connect(compare)
 
