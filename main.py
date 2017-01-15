@@ -65,6 +65,8 @@ def show_second_form():
             matrix[idx][0] = c1[idx]
             matrix[idx][1] = c2[idx]
             matrix[idx][2] = c3[idx]
+            matrix[idx][3] = c1[idx] - ser
+
         return matrix, ser
 
     matrix1, ser1 = cook_matrix(cook_text(text1, word_search))
