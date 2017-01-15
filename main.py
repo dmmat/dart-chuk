@@ -39,13 +39,13 @@ form = Form()
 
 
 def show_second_form():
-    if len(main_window.text1) == 0 or len(main_window.text2) == 0 or len(main_window.ui.text_edit.toPlainText()) == 0:
+    if len(main_window.text1) == 0 or len(main_window.text2) == 0 or len(main_window.ui.textEdit.toPlainText()) == 0:
         return False
     form.show()
     main_window.hide()
     text1 = main_window.text1
     text2 = main_window.text2
-    word_search = main_window.ui.text_edit.toPlainText()
+    word_search = main_window.ui.textEdit.toPlainText()
 
     def cook_text(input_text, search):
         text = re.compile('\w+').findall(input_text)
@@ -93,7 +93,7 @@ def show_second_form():
     form.ui.label_10.setText(str(var1))
     form.ui.label_17.setText(str(var2))
     form.ui.label_11.setText(str(stab1))
-    form.ui.label_23.setText(str(stab2))
+    form.ui.label_21.setText(str(stab2))
 
     def compare():
         smuga1 = ser1 + (mira1 * 2)
