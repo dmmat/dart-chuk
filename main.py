@@ -94,10 +94,16 @@ def show_second_form():
     form.ui.label_17.setText(str(var2))
     form.ui.label_11.setText(str(stab1))
     form.ui.label_23.setText(str(stab2))
-    form.ui.label_26.setText(str(smuga1))
-    form.ui.label_27.setText(str(smuga2))
 
-    # form.ui.pushButton.clicked.connect(form.hide)
+    def compare():
+        smuga1 = ser1 + (mira1 * 2)
+        smuga2 = ser2 - (mira2 * 2)
+        form.ui.label_26.setText(str(smuga1))
+        form.ui.label_27.setText(str(smuga2))
+
+    form.ui.pushButton.clicked.connect(compare)
+
+        # form.ui.pushButton.clicked.connect(form.hide)
 
 
 def OpenDialog():
@@ -123,16 +129,13 @@ def OpenSecondFile(self):
             data = f.read()
             main_window.ui.textBrowser_2.setText(data)
             main_window.text2 = data
-def compare():
-    matrix1, ser1, vid1, mira1, var1, stab1 = cook_matrix(cook_text(text1, word_search))
-    matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cook_text(text2, word_search))
-    smuga1 = ser1+(mira1*2)
-    smuga2 = ser2-(mira2*2)
+
+
+
 
 main_window.ui.pushButton.clicked.connect(show_second_form)
 main_window.ui.pushButton_2.clicked.connect(OpenFirstFile)
 main_window.ui.pushButton_3.clicked.connect(OpenSecondFile)
-form.ui.pushButton.clicked.connect(compare)
 main_window.show()
 
 sys.exit(app.exec_())
