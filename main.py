@@ -115,8 +115,8 @@ def show_second_form():
         smuga4 = ser2 - (mira2 * 2)
         st1 = 'від {0:.2f} до {1:.2f}'.format(smuga2, smuga1)
         st2 = 'від {0:.2f} до {1:.2f}'.format(smuga4, smuga3)
-        form.ui.label_26.setText(format(st1, '.4f'))
-        form.ui.label_27.setText(format(st2, '.4f'))
+        form.ui.label_26.setText(st1)
+        form.ui.label_27.setText(st2)
 
     form.ui.pushButton.clicked.connect(compare)
 
