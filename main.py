@@ -80,8 +80,11 @@ def show_second_form():
         stab = 1 - (var/(math.sqrt(sumc2-1)))
         return matrix, ser, vid, mira, var, stab
 
-    matrix1, ser1, vid1, mira1, var1, stab1 = cook_matrix(cook_text(text1, word_search))
-    matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cook_text(text2, word_search))
+    cooked_text1 = cook_text(text1, word_search)
+    cooked_text2 = cook_text(text2, word_search)
+
+    matrix1, ser1, vid1, mira1, var1, stab1 = cook_matrix(cooked_text1)
+    matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cooked_text2)
     form.ui.tableView.setModel(Model(form, matrix=matrix1))
     form.ui.tableView_2.setModel(Model(form, matrix=matrix2))
     form.ui.label_7.setText(str(ser1))
