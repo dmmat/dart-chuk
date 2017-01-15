@@ -74,14 +74,26 @@ def show_second_form():
             matrix[idx][4] = (c1[idx] - ser) ** 2
             matrix[idx][5] = ((c1[idx] - ser) ** 2) * c2[idx]
             sumc5 += matrix[idx][5]
-        vid = math.sqrt(sumc5/sumc2)
-        mira = vid/math.sqrt(sumc2)
-        var = vid/ser
-        stab = 1 - (var/(math.sqrt(sumc2-1)))
+        vid = math.sqrt(sumc5 / sumc2)
+        mira = vid / math.sqrt(sumc2)
+        var = vid / ser
+        stab = 1 - (var / (math.sqrt(sumc2 - 1)))
         return matrix, ser, vid, mira, var, stab
 
-    matrix1, ser1, vid1, mira1, var1, stab1 = cook_matrix(cook_text(text1, word_search))
-    matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cook_text(text2, word_search))
+    cooked_text1 = cook_text(text1, word_search)
+    cooked_text2 = cook_text(text1, word_search)
+
+    t_text1 = list(filter((0).__ne__, cooked_text1))
+    t_text2 = list(filter((0).__ne__, cooked_text2))
+    f_sk = list((map(lambda x, y: x + y, t_text1, t_text2)))
+    f_N = sum(t_text1) + sum(t_text2)
+    f_sm = [sum(t_text1), sum(t_text2), f_N]
+    s_m_1 = sum(map(lambda x, y: (x ** 2) / (y * f_sm[0]), t_text1, f_sk))
+    s_m_2 = sum(map(lambda x, y: (x ** 2) / (y * f_sm[1]), t_text2, f_sk))
+    f_result = f_N * ((s_m_1 + s_m_2) - 1)
+
+    matrix1, ser1, vid1, mira1, var1, stab1 = cook_matrix(cooked_text1)
+    matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cooked_text2)
     form.ui.tableView.setModel(Model(form, matrix=matrix1))
     form.ui.tableView_2.setModel(Model(form, matrix=matrix2))
 
@@ -106,10 +118,9 @@ def show_second_form():
         form.ui.label_26.setText(format(st1, '.4f'))
         form.ui.label_27.setText(format(st2, '.4f'))
 
-
     form.ui.pushButton.clicked.connect(compare)
 
-        # form.ui.pushButton.clicked.connect(form.hide)
+    # form.ui.pushButton.clicked.connect(form.hide)
 
 
 def OpenDialog():
@@ -135,8 +146,6 @@ def OpenSecondFile(self):
             data = f.read()
             main_window.ui.textBrowser_2.setText(data)
             main_window.text2 = data
-
-
 
 
 main_window.ui.pushButton.clicked.connect(show_second_form)
