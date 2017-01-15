@@ -100,8 +100,8 @@ def show_second_form():
         smuga2 = ser1 - (mira2 * 2)
         smuga3 = ser2 + (mira2 * 2)
         smuga4 = ser2 - (mira2 * 2)
-        st1 = 'від {0:.2f} до{1:.2f}'.format(smuga2, smuga1)
-        st2 = 'від {0:.2f} до{1:.2f}'.format(smuga4, smuga3)
+        st1 = 'від {0:.2f} до {1:.2f}'.format(smuga2, smuga1)
+        st2 = 'від {0:.2f} до {1:.2f}'.format(smuga4, smuga3)
         form.ui.label_26.setText(str(st1))
         form.ui.label_27.setText(str(st2))
 
