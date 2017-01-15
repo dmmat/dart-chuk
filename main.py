@@ -63,7 +63,9 @@ def show_second_form():
         c2 = [len(list(group)) for key, group in groupby(elms)]
         c3 = list(map(lambda x, y: x * y, c1, c2))
         matrix = [["" for x in range(6)] for y in c1]
-        ser = sum(c3) / sum(c2)
+        sumc2 = sum(c2)
+        ser = sum(c3) / sumc2
+        sumc5 = 0
         for idx in range(len(c1)):
             matrix[idx][0] = c1[idx]
             matrix[idx][1] = c2[idx]
@@ -71,14 +73,29 @@ def show_second_form():
             matrix[idx][3] = c1[idx] - ser
             matrix[idx][4] = (c1[idx] - ser) ** 2
             matrix[idx][5] = ((c1[idx] - ser) ** 2) * c2[idx]
-        return matrix, ser
+            sumc5 += matrix[idx][5]
+        vid = math.sqrt(sumc5/sumc2)
+        mira = vid/math.sqrt(sumc2)
+        var = vid/ser
+        stab = 1 - (var/(math.sqrt(sumc2-1)))
+        return matrix, ser, vid, mira, var, stab
 
-    matrix1, ser1 = cook_matrix(cook_text(text1, word_search))
-    matrix2, ser2 = cook_matrix(cook_text(text2, word_search))
+    matrix1, ser1, vid1, mira1, var1, stab1 = cook_matrix(cook_text(text1, word_search))
+    matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cook_text(text2, word_search))
     form.ui.tableView.setModel(Model(form, matrix=matrix1))
     form.ui.tableView_2.setModel(Model(form, matrix=matrix2))
     form.ui.label_7.setText(str(ser1))
     form.ui.label_12.setText(str(ser2))
+    form.ui.label_8.setText(str(vid1))
+    form.ui.label_13.setText(str(vid2))
+    form.ui.label_9.setText(str(mira1))
+    form.ui.label_14.setText(str(mira2))
+    form.ui.label_10.setText(str(var1))
+    form.ui.label_17.setText(str(var2))
+    form.ui.label_11.setText(str(stab1))
+    form.ui.label_23.setText(str(stab2))
+    form.ui.label_26.setText(str(smuga1))
+    form.ui.label_27.setText(str(smuga2))
 
     # form.ui.pushButton.clicked.connect(form.hide)
 
@@ -106,10 +123,16 @@ def OpenSecondFile(self):
             data = f.read()
             main_window.ui.textBrowser_2.setText(data)
             main_window.text2 = data
+def compare():
+    matrix1, ser1, vid1, mira1, var1, stab1 = cook_matrix(cook_text(text1, word_search))
+    matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cook_text(text2, word_search))
+    smuga1 = ser1+(mira1*2)
+    smuga2 = ser2-(mira2*2)
 
 main_window.ui.pushButton.clicked.connect(show_second_form)
 main_window.ui.pushButton_2.clicked.connect(OpenFirstFile)
 main_window.ui.pushButton_3.clicked.connect(OpenSecondFile)
+form.ui.pushButton.clicked.connect(compare)
 main_window.show()
 
 sys.exit(app.exec_())
