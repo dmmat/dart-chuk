@@ -84,16 +84,17 @@ def show_second_form():
     matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cook_text(text2, word_search))
     form.ui.tableView.setModel(Model(form, matrix=matrix1))
     form.ui.tableView_2.setModel(Model(form, matrix=matrix2))
-    form.ui.label_7.setText(str(ser1))
-    form.ui.label_12.setText(str(ser2))
-    form.ui.label_8.setText(str(vid1))
-    form.ui.label_13.setText(str(vid2))
-    form.ui.label_9.setText(str(mira1))
-    form.ui.label_14.setText(str(mira2))
-    form.ui.label_10.setText(str(var1))
-    form.ui.label_17.setText(str(var2))
-    form.ui.label_11.setText(str(stab1))
-    form.ui.label_21.setText(str(stab2))
+
+    form.ui.label_7.setText(format(ser1, '.4f'))
+    form.ui.label_12.setText(format(ser2, '.4f'))
+    form.ui.label_8.setText(format(vid1, '.4f'))
+    form.ui.label_13.setText(format(vid2, '.4f'))
+    form.ui.label_9.setText(format(mira1, '.4f'))
+    form.ui.label_14.setText(format(mira2, '.4f'))
+    form.ui.label_10.setText(format(var1, '.4f'))
+    form.ui.label_17.setText(format(var2, '.4f'))
+    form.ui.label_11.setText(format(stab1, '.4f'))
+    form.ui.label_21.setText(format(stab2, '.4f'))
 
     def compare():
         smuga1 = ser1 + (mira1 * 2)
@@ -102,8 +103,8 @@ def show_second_form():
         smuga4 = ser2 - (mira2 * 2)
         st1 = 'від {0:.2f} до {1:.2f}'.format(smuga2, smuga1)
         st2 = 'від {0:.2f} до {1:.2f}'.format(smuga4, smuga3)
-        form.ui.label_26.setText(str(st1))
-        form.ui.label_27.setText(str(st2))
+        form.ui.label_26.setText(format(st1, '.4f'))
+        form.ui.label_27.setText(format(st2, '.4f'))
 
 
     form.ui.pushButton.clicked.connect(compare)
