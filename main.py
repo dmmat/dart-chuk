@@ -15,6 +15,10 @@ class Form(PyQt5.QtWidgets.QWidget):
         self.ui = form2.Ui_Form()
         self.ui.setupUi(self)
 
+    def closeEvent(self, event):
+        main_window.show()
+        event.accept()
+
 
 class MainWindow(PyQt5.QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -37,9 +41,8 @@ form = Form()
 def show_second_form():
     if len(main_window.text1) == 0 or len(main_window.text2) == 0 or len(main_window.ui.text_edit.toPlainText()) == 0:
         return False
-    # main_window.hide()
     form.show()
-
+    main_window.hide()
     text1 = main_window.text1
     text2 = main_window.text2
     word_search = main_window.ui.text_edit.toPlainText()
@@ -66,8 +69,8 @@ def show_second_form():
             matrix[idx][1] = c2[idx]
             matrix[idx][2] = c3[idx]
             matrix[idx][3] = c1[idx] - ser
-            matrix[idx][4] = (c1[idx] - ser)**2
-            matrix[idx][5] = ((c1[idx] - ser)**2)*c2[idx]
+            matrix[idx][4] = (c1[idx] - ser) ** 2
+            matrix[idx][5] = ((c1[idx] - ser) ** 2) * c2[idx]
         return matrix, ser
 
     matrix1, ser1 = cook_matrix(cook_text(text1, word_search))
@@ -80,35 +83,29 @@ def show_second_form():
     # form.ui.pushButton.clicked.connect(form.hide)
 
 
-def OpenFirstFile(self):
+def OpenDialog():
     dlg = QFileDialog()
     dlg.setFileMode(QFileDialog.AnyFile)
     dlg.setNameFilters(["Text files (*.txt)"])
+    return dlg
 
+
+def OpenFirstFile(self):
+    dlg = OpenDialog()
     if dlg.exec_():
-        filenames = dlg.selectedFiles()
-        f = open(filenames[0], 'r')
-
-        with f:
+        with open(dlg.selectedFiles()[0], 'r') as f:
             data = f.read()
             main_window.ui.textBrowser.setText(data)
             main_window.text1 = data
 
 
 def OpenSecondFile(self):
-    dlg = QFileDialog()
-    dlg.setFileMode(QFileDialog.AnyFile)
-    dlg.setNameFilters(["Text files (*.txt)"])
-
+    dlg = OpenDialog()
     if dlg.exec_():
-        filenames = dlg.selectedFiles()
-        f = open(filenames[0], 'r')
-
-        with f:
+        with open(dlg.selectedFiles()[0], 'r') as f:
             data = f.read()
             main_window.ui.textBrowser_2.setText(data)
             main_window.text2 = data
-
 
 main_window.ui.pushButton.clicked.connect(show_second_form)
 main_window.ui.pushButton_2.clicked.connect(OpenFirstFile)
