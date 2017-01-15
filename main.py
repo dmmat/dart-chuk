@@ -58,14 +58,21 @@ def show_second_form():
     def cook_matrix(elms):
         c1 = sorted(list(set(elms)))
         c2 = [len(list(group)) for key, group in groupby(elms)]
+        c3 = list(map(lambda x, y: x * y, c1, c2))
         matrix = [["" for x in range(6)] for y in c1]
+        ser = sum(c3) / sum(c2)
         for idx in range(len(c1)):
             matrix[idx][0] = c1[idx]
             matrix[idx][1] = c2[idx]
-        return matrix
+            matrix[idx][2] = c3[idx]
+        return matrix, ser
 
-    form.ui.tableView.setModel(Model(form, matrix=cook_matrix(cook_text(text1, word_search))))
-    form.ui.tableView_2.setModel(Model(form, matrix=cook_matrix(cook_text(text2, word_search))))
+    matrix1, ser1 = cook_matrix(cook_text(text1, word_search))
+    matrix2, ser2 = cook_matrix(cook_text(text2, word_search))
+    form.ui.tableView.setModel(Model(form, matrix=matrix1))
+    form.ui.tableView_2.setModel(Model(form, matrix=matrix2))
+    form.ui.label_7.setText(str(ser1))
+    form.ui.label_12.setText(str(ser2))
 
     # form.ui.pushButton.clicked.connect(form.hide)
 
