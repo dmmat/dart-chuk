@@ -151,6 +151,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ToolTipText, brush)
         MainWindow.setPalette(palette)
         font = QtGui.QFont()
+        font.setFamily("HelveticaNeueCyr")
         font.setPointSize(12)
         font.setBold(True)
         font.setItalic(False)
@@ -182,6 +183,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Link, brush)
         self.textBrowser.setPalette(palette)
         font = QtGui.QFont()
+        font.setFamily("Sans Serif")
         font.setPointSize(9)
         font.setBold(False)
         font.setWeight(50)
@@ -190,6 +192,7 @@ class Ui_MainWindow(object):
         self.textBrowser_2 = QtWidgets.QTextBrowser(self.centralwidget)
         self.textBrowser_2.setGeometry(QtCore.QRect(350, 30, 261, 171))
         font = QtGui.QFont()
+        font.setFamily("Sans Serif")
         font.setPointSize(9)
         font.setBold(False)
         font.setWeight(50)
@@ -198,6 +201,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(30, 10, 47, 13))
         font = QtGui.QFont()
+        font.setFamily("Sans Serif")
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
@@ -206,6 +210,7 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(350, 10, 47, 13))
         font = QtGui.QFont()
+        font.setFamily("Sans Serif")
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
@@ -234,6 +239,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ButtonText, brush)
         self.pushButton.setPalette(palette)
         font = QtGui.QFont()
+        font.setFamily("Sans Serif")
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
@@ -263,6 +269,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ButtonText, brush)
         self.pushButton_2.setPalette(palette)
         font = QtGui.QFont()
+        font.setFamily("Sans Serif")
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
@@ -292,6 +299,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ButtonText, brush)
         self.pushButton_3.setPalette(palette)
         font = QtGui.QFont()
+        font.setFamily("Sans Serif")
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
@@ -301,6 +309,7 @@ class Ui_MainWindow(object):
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(120, 290, 121, 24))
         font = QtGui.QFont()
+        font.setFamily("Sans Serif")
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
@@ -309,6 +318,7 @@ class Ui_MainWindow(object):
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit.setGeometry(QtCore.QRect(220, 290, 171, 24))
         font = QtGui.QFont()
+        font.setFamily("Sans Serif")
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
@@ -341,6 +351,6 @@ class Ui_MainWindow(object):
         self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'Sans Serif\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
 
