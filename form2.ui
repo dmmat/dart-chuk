@@ -25,9 +25,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>84</red>
+        <green>197</green>
+        <blue>49</blue>
        </color>
       </brush>
      </colorrole>
@@ -162,9 +162,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>84</red>
+        <green>197</green>
+        <blue>49</blue>
        </color>
       </brush>
      </colorrole>
@@ -299,9 +299,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>84</red>
+        <green>197</green>
+        <blue>49</blue>
        </color>
       </brush>
      </colorrole>
@@ -455,6 +455,43 @@
      <width>291</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>208</red>
+         <green>208</green>
+         <blue>208</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>208</red>
+         <green>208</green>
+         <blue>208</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>208</red>
+         <green>208</green>
+         <blue>208</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
    </property>
    <property name="font">
     <font>
@@ -970,6 +1007,43 @@
      <height>161</height>
     </rect>
    </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>208</red>
+         <green>208</green>
+         <blue>208</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>208</red>
+         <green>208</green>
+         <blue>208</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>208</red>
+         <green>208</green>
+         <blue>208</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
    <property name="font">
     <font>
      <family>Open Sans</family>
@@ -986,10 +1060,10 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>300</x>
      <y>350</y>
-     <width>191</width>
-     <height>23</height>
+     <width>161</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -1000,6 +1074,12 @@
    </property>
    <property name="text">
     <string>Порівняти</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_48">
