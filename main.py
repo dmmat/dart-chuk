@@ -64,7 +64,8 @@ def show_second_form():
         c3 = list(map(lambda x, y: x * y, c1, c2))
         matrix = [["" for x in range(6)] for y in c1]
         sumc2 = sum(c2)
-        ser = sum(c3) / sumc2
+        sumc3 = sum(c3)
+        ser = sumc3 / sumc2
         sumc5 = 0
         for idx in range(len(c1)):
             matrix[idx][0] = c1[idx]
@@ -78,7 +79,9 @@ def show_second_form():
         mira = vid / math.sqrt(sumc2)
         var = vid / ser
         stab = 1 - (var / (math.sqrt(sumc2 - 1)))
-        return matrix, ser, vid, mira, var, stab
+        es = sumc5/(sumc2 *(sumc2-1))
+        vidn = sumc3/1000
+        return matrix, ser, vid, mira, var, stab, es, sumc2, vidn, sumc3
 
     cooked_text1 = cook_text(text1, word_search)
     cooked_text2 = cook_text(text1, word_search)
@@ -92,8 +95,8 @@ def show_second_form():
     s_m_2 = sum(map(lambda x, y: (x ** 2) / (y * f_sm[1]), t_text2, f_sk))
     f_result = f_N * ((s_m_1 + s_m_2) - 1)
 
-    matrix1, ser1, vid1, mira1, var1, stab1 = cook_matrix(cooked_text1)
-    matrix2, ser2, vid2, mira2, var2, stab2 = cook_matrix(cooked_text2)
+    matrix1, ser1, vid1, vidn1, mira1, var1, stab1 = cook_matrix(cooked_text1)
+    matrix2, ser2, vid2, vidn2, mira2, var2, stab2 = cook_matrix(cooked_text2)
     form.ui.tableView.setModel(Model(form, matrix=matrix1))
     form.ui.tableView_2.setModel(Model(form, matrix=matrix2))
 
@@ -107,6 +110,8 @@ def show_second_form():
     form.ui.label_17.setText(format(var2, '.4f'))
     form.ui.label_11.setText(format(stab1, '.4f'))
     form.ui.label_21.setText(format(stab2, '.4f'))
+    form.ui.label_11.setText(format(vidn1, '.4f'))
+    form.ui.label_21.setText(format(vidn2, '.4f'))
 
     def compare():
         smuga1 = ser1 + (mira1 * 2)
