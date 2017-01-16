@@ -9,6 +9,13 @@ class Model(QAbstractTableModel):
         self.added = 0
         self.matrix = matrix
 
+    header_labels = ['Column 1', 'Column 2', 'Column 3', 'Column 4', 'Column 4', 'Column 4']
+
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
+        if role == Qt.DisplayRole and orientation == Qt.Horizontal:
+            return self.header_labels[section]
+        return QAbstractTableModel.headerData(self, section, orientation, role)
+
     def rowCount(self, parent=QModelIndex()):
         return len(self.matrix)
 

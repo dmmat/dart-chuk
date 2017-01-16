@@ -91,6 +91,8 @@ def show_second_form():
 
     matrix1, ser1, vid1, mira1, var1, stab1, es1, sumc21, vidn1, sumc31 = cook_matrix(cooked_text1)
     matrix2, ser2, vid2, mira2, var2, stab2, es2, sumc22, vidn2, sumc32 = cook_matrix(cooked_text2)
+    header_labels = ['Column 1', 'Column 2', 'Column 3', 'Column 4', 'Column 4', 'Column 4']
+
     form.ui.tableView.setModel(Model(form, matrix=matrix1))
     form.ui.tableView_2.setModel(Model(form, matrix=matrix2))
 
