@@ -433,7 +433,6 @@
   </property>
   <property name="font">
    <font>
-    <family>HelveticaNeueCyr</family>
     <pointsize>12</pointsize>
     <weight>75</weight>
     <italic>false</italic>
