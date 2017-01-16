@@ -151,6 +151,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ToolTipText, brush)
         MainWindow.setPalette(palette)
         font = QtGui.QFont()
+        font.setFamily("HelveticaNeueCyr")
         font.setPointSize(12)
         font.setBold(True)
         font.setItalic(False)

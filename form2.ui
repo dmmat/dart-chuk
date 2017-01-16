@@ -427,6 +427,7 @@
   </property>
   <property name="font">
    <font>
+    <family>HelveticaNeueCyr</family>
     <pointsize>12</pointsize>
    </font>
   </property>
@@ -494,6 +495,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -515,6 +517,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -536,6 +539,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -557,6 +561,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -578,6 +583,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -599,6 +605,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -620,6 +627,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -641,6 +649,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -659,6 +668,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -677,6 +687,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -695,6 +706,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -713,6 +725,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -731,6 +744,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -749,6 +763,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -767,6 +782,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -785,6 +801,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -803,6 +820,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -824,6 +842,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -842,6 +861,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -863,6 +883,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -884,6 +905,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -905,6 +927,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -923,6 +946,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -944,6 +968,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -965,6 +990,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -1020,6 +1046,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -1105,6 +1132,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -1129,6 +1157,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -1150,6 +1179,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
      <weight>75</weight>
      <italic>false</italic>
@@ -1174,6 +1204,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -1194,6 +1225,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -1214,6 +1246,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -1232,6 +1265,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -1250,6 +1284,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -1270,6 +1305,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -1288,13 +1324,14 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Критерій Стьюдента процентних показників </string>
+     <string>Критерій Стьєдента процентних показників </string>
     </property>
    </widget>
    <widget class="QLabel" name="label_39">
@@ -1308,6 +1345,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -1326,6 +1364,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -1344,6 +1383,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -1364,6 +1404,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -1384,6 +1425,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -1402,13 +1444,14 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Критерій Стьюдента </string>
+     <string>Критерій Стьєдента </string>
     </property>
    </widget>
    <widget class="QLabel" name="label_34">
@@ -1422,6 +1465,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -1440,6 +1484,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -1460,6 +1505,7 @@
     </property>
     <property name="font">
      <font>
+      <family>Sans Serif</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -1479,6 +1525,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Sans Serif</family>
      <pointsize>9</pointsize>
     </font>
    </property>
