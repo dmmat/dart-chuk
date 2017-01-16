@@ -79,24 +79,18 @@ def show_second_form():
         mira = vid / math.sqrt(sumc2)
         var = vid / ser
         stab = 1 - (var / (math.sqrt(sumc2 - 1)))
-        es = sumc5/(sumc2 *(sumc2-1))
-        vidn = sumc3/1000
+        es = sumc5 / (sumc2 * (sumc2 - 1))
+        vidn = sumc3 / 10000
         return matrix, ser, vid, mira, var, stab, es, sumc2, vidn, sumc3
 
     cooked_text1 = cook_text(text1, word_search)
-    cooked_text2 = cook_text(text1, word_search)
+    cooked_text2 = cook_text(text2, word_search)
 
-    t_text1 = list(filter((0).__ne__, cooked_text1))
-    t_text2 = list(filter((0).__ne__, cooked_text2))
-    f_sk = list((map(lambda x, y: x + y, t_text1, t_text2)))
-    f_N = sum(t_text1) + sum(t_text2)
-    f_sm = [sum(t_text1), sum(t_text2), f_N]
-    s_m_1 = sum(map(lambda x, y: (x ** 2) / (y * f_sm[0]), t_text1, f_sk))
-    s_m_2 = sum(map(lambda x, y: (x ** 2) / (y * f_sm[1]), t_text2, f_sk))
-    f_result = f_N * ((s_m_1 + s_m_2) - 1)
+    # t_text1 = list(filter((0).__ne__, cooked_text1))
+    # t_text2 = list(filter((0).__ne__, cooked_text2))
 
-    matrix1, ser1, vid1, vidn1, mira1, var1, stab1 = cook_matrix(cooked_text1)
-    matrix2, ser2, vid2, vidn2, mira2, var2, stab2 = cook_matrix(cooked_text2)
+    matrix1, ser1, vid1, mira1, var1, stab1, es1, sumc21, vidn1, sumc31 = cook_matrix(cooked_text1)
+    matrix2, ser2, vid2, mira2, var2, stab2, es2, sumc22, vidn2, sumc32 = cook_matrix(cooked_text2)
     form.ui.tableView.setModel(Model(form, matrix=matrix1))
     form.ui.tableView_2.setModel(Model(form, matrix=matrix2))
 
@@ -110,8 +104,8 @@ def show_second_form():
     form.ui.label_17.setText(format(var2, '.4f'))
     form.ui.label_11.setText(format(stab1, '.4f'))
     form.ui.label_21.setText(format(stab2, '.4f'))
-    form.ui.label_11.setText(format(vidn1, '.4f'))
-    form.ui.label_21.setText(format(vidn2, '.4f'))
+    form.ui.label_5.setText(format(vidn1, '.4f'))
+    form.ui.label_24.setText(format(vidn2, '.4f'))
 
     def compare():
         smuga1 = ser1 + (mira1 * 2)
@@ -120,8 +114,34 @@ def show_second_form():
         smuga4 = ser2 - (mira2 * 2)
         st1 = 'від {0:.2f} до {1:.2f}'.format(smuga2, smuga1)
         st2 = 'від {0:.2f} до {1:.2f}'.format(smuga4, smuga3)
+
+        stud = (ser1 - ser2) / (math.sqrt(es1 + es2))
+
+        p = ((vidn1*100*sumc31) + (vidn2*100*sumc32))/(sumc31+sumc32)
+
+        studpro = ((vidn1*100) - (vidn2*100)) / math.sqrt(p * (100-p) * (1/sumc31+1/sumc32))
+
+        svoboda1 = (11 - 1)*(2 - 1)
+        svoboda2 = sumc21 + sumc22 - 2
+        svoboda3 = sumc31 + sumc32 - 2
+
+        t_text1 = cooked_text1
+        t_text2 = cooked_text2
+        f_sk = list((map(lambda x, y: x + y, t_text1, t_text2)))
+        f_N = sum(t_text1) + sum(t_text2)
+        f_sm = [sum(t_text1), sum(t_text2), f_N]
+        s_m_1 = sum(map(lambda x, y: (x ** 2) / (y * f_sm[0]) if (y != 0) else 0, t_text1, f_sk))
+        s_m_2 = sum(map(lambda x, y: (x ** 2) / (y * f_sm[1]) if (y != 0) else 0, t_text2, f_sk))
+        f_result = f_N * ((s_m_1 + s_m_2) - 1)
+
+        form.ui.label_34.setText(format(stud, '.4f'))
+        form.ui.label_39.setText(format(studpro, '.4f'))
+        form.ui.label_31.setText(format(svoboda1, '.4f'))
+        form.ui.label_35.setText(format(svoboda2, '.4f'))
+        form.ui.label_37.setText(format(svoboda3, '.4f'))
         form.ui.label_26.setText(st1)
         form.ui.label_27.setText(st2)
+        form.ui.label_29.setText(format(f_result, '.4f'))
 
     form.ui.pushButton.clicked.connect(compare)
 
