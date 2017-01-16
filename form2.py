@@ -297,4 +297,3 @@ class Ui_Form(object):
         self.label_25.setText(_translate("Form", "Смуга коливання середньої для кожної вибірки"))
         self.label_26.setText(_translate("Form", "для 1"))
         self.label_27.setText(_translate("Form", "для 2"))
-
