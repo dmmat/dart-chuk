@@ -56,4 +56,3 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "Загрузити текст 2"))
         self.label_3.setText(_translate("MainWindow", "введіть слово"))
 
-

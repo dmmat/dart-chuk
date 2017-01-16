@@ -7,11 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>714</width>
-    <height>537</height>
+    <height>506</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="locale">
+   <locale language="Ukrainian" country="Ukraine"/>
   </property>
   <widget class="QTableView" name="tableView">
    <property name="geometry">
@@ -358,86 +361,6 @@
     <string>Порівняти</string>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>480</y>
-     <width>351</width>
-     <height>15</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_5">
-    <item>
-     <widget class="QLabel" name="label_40">
-      <property name="text">
-       <string>Хі2 для низких частот</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_41">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_42">
-      <property name="text">
-       <string>Ступені свободи</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_43">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>500</y>
-     <width>459</width>
-     <height>15</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_6">
-    <item>
-     <widget class="QLabel" name="label_44">
-      <property name="text">
-       <string>Критерій Стьєдента для низьких частот </string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_45">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_46">
-      <property name="text">
-       <string>Ступені свободи</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_47">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QLabel" name="label_48">
    <property name="geometry">
     <rect>
@@ -617,42 +540,6 @@
     </item>
    </layout>
   </widget>
-  <zorder>tableView</zorder>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
-  <zorder>label_3</zorder>
-  <zorder>label_4</zorder>
-  <zorder>label_16</zorder>
-  <zorder>label_6</zorder>
-  <zorder>label_5</zorder>
-  <zorder>label_7</zorder>
-  <zorder>label_8</zorder>
-  <zorder>label_9</zorder>
-  <zorder>label_10</zorder>
-  <zorder>label_11</zorder>
-  <zorder>label_12</zorder>
-  <zorder>label_13</zorder>
-  <zorder>label_14</zorder>
-  <zorder>label_15</zorder>
-  <zorder>label_17</zorder>
-  <zorder>label_18</zorder>
-  <zorder>label_19</zorder>
-  <zorder>label_20</zorder>
-  <zorder>label_21</zorder>
-  <zorder>label_22</zorder>
-  <zorder>label_23</zorder>
-  <zorder>label_24</zorder>
-  <zorder>tableView_2</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>label_48</zorder>
-  <zorder>label_49</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>label_27</zorder>
  </widget>
  <resources/>
  <connections/>
